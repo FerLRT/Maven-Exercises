@@ -7,5 +7,17 @@ pipeline {
       }
     }
 
+    stage('Compile') {
+      steps {
+        sh 'mvn clean install'
+      }
+    }
+
+    stage('ended') {
+      steps {
+        echo 'He terminado'
+      }
+    }
+
   }
 }
